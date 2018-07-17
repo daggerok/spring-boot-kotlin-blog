@@ -18,6 +18,7 @@ USER appuser
 WORKDIR /home/appuser
 VOLUME /home/appuser
 ARG JAVA_OPTS_ARGS="\
+ -Djavax.net.debug=ssl \
  -Djava.net.preferIPv4Stack=true \
  -XX:+UnlockExperimentalVMOptions \
  -XX:+UseCGroupMemoryLimitForHeap \

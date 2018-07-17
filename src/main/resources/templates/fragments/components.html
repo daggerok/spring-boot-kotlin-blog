@@ -9,6 +9,14 @@
 <body>
 
 <div th:fragment="nav">
+  <style>
+    .list-style-type-none {
+      list-style-type: none;
+    }
+    .home-link {
+      text-decoration: none;
+    }
+  </style>
   <ul class="list-style-type-none">
     <li><a th:href="@{/}" class="home-link">home</a></li>
     <li><a th:href="@{/bootstrap}">bootstrap</a></li>
@@ -17,8 +25,10 @@
 </div>
 
 <div th:fragment="messages (messages)" th:assert="${!#lists.isEmpty(messages)}">
-  <ul th:each="message : ${messages}">
-    <li th:text="${message}"></li>
+  <ul>
+    <li th:each="message : ${messages}" class="list-style-type-none">
+      [[${message}]]
+    </li>
   </ul>
 </div>
 
