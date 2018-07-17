@@ -1,0 +1,31 @@
+allprojects {
+  apply plugin: 'java'
+
+  version = '0.0.1'
+  group = 'com.github.daggerok'
+  sourceCompatibility = targetCompatibility = "$javaVersion"
+
+  defaultTasks 'clean', 'build'
+
+  dependencies {
+    // In java we trust...
+    implementation "io.vavr:vavr:$vavrVersion"
+
+    implementation 'org.webjars:webjars-locator:0.34'
+    implementation 'org.webjars.bower:css-reset:2.5.1'
+
+    implementation 'org.webjars:jquery:3.3.1-1'
+    implementation 'org.webjars:popper.js:1.14.1'
+    implementation 'org.webjars.npm:tether:1.4.0'
+    implementation 'org.webjars:bootstrap:4.1.1'
+
+    implementation 'org.webjars:jquery:3.3.1-1'
+    implementation 'org.webjars.npm:roboto-fontface:0.9.0'
+    implementation 'org.webjars:material-design-icons:3.0.1'
+    implementation 'org.webjars.bower:materialize:1.0.0-rc.2'
+    implementation 'org.webjars:materializecss:1.0.0-rc.2'
+
+    //implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    //implementation "ch.qos.logback:logback-classic:$logbackVersion"
+  }
+}

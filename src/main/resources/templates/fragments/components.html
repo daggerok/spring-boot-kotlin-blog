@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thymeleaf Components</title>
+</head>
+
+<body>
+
+<div th:fragment="nav">
+  <ul class="list-style-type-none">
+    <li><a th:href="@{/}" class="home-link">home</a></li>
+    <li><a th:href="@{/bootstrap}">bootstrap</a></li>
+    <li><a th:href="@{/materialize}">materialize</a></li>
+  </ul>
+</div>
+
+<div th:fragment="messages (messages)" th:assert="${!#lists.isEmpty(messages)}">
+  <ul th:each="message : ${messages}">
+    <li th:text="${message}"></li>
+  </ul>
+</div>
+
+</body>
+</html>

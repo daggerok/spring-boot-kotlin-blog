@@ -1,0 +1,45 @@
+= {root-project-name} ({project-version})
+Maksim Kostromin <daggerok@gmail.com>
+{docdatetime}
+:doctype: book
+:toc: left
+:toclevels: 4
+:numbered:
+:icons: font
+:hide-uri-scheme:
+:revnumber: {project-version}
+:source-highlighter: highlightjs
+:example-caption!:
+
+Travis CI status:
+image:https://travis-ci.org/daggerok/{root-project-name}.svg?branch=master["Build Status", link={github-url}]
+
+== Introduction
+
+include::../README.adoc[tags=content]
+
+== Implementation
+
+.webflux REST API
+[source,kotlin,linenums]
+----
+include::../src/main/java/daggerok/app/Rest.kt[tags=content]
+----
+
+.web MVC
+[source,kotlin,linenums]
+----
+include::../src/main/java/daggerok/app/ThymeleafConfig.kt[tags=content]
+----
+
+.webflux MVC
+[source,kotlin,linenums]
+----
+include::../src/main/java/daggerok/app/Rest.kt[tags=content]
+----
+
+== Links
+
+ifdef::backend-html5[- link:./index.pdf[Documentation in PFD format]]
+- link:{github-url}[GitHub repo]
+- link:https://daggerok.github.io/{root-project-name}[GitHub pages]

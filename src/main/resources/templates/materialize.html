@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Materialize CSS | Dynamic</title>
+  <link rel="shortcut icon" th:href="@{/favicon.ico}" type="image/x-icon">
+  <link rel="stylesheet"
+        th:href="@{/webjars/tether/1.4.0/dist/css/tether.min.css}"
+        href="webjars/tether/1.4.0/dist/css/tether.css">
+  <link rel="stylesheet"
+        th:href="@{/webjars/material-design-icons/3.0.1/material-icons.css}"
+        href="webjars/material-design-icons/3.0.1/material-icons.css">
+  <link rel="stylesheet"
+        th:href="@{/webjars/materializecss/1.0.0-rc.2/css/materialize.min.css}"
+        href="webjars/materializecss/1.0.0-rc.2/css/materialize.css">
+  <!--
+  <link rel="stylesheet"
+        th:href="@{/webjars/materialize/1.0.0-rc.2/dist/css/materialize.min.css}"
+        href="webjars/materialize/1.0.0-rc.2/dist/css/materialize.css">
+  -->
+  <style>
+    .list-style-type-none {
+      list-style-type: none;
+    }
+    .home-link {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<h1>Dynamic</h1>
+
+<div th:include="fragments/components :: nav"></div>
+
+<div th:include="fragments/components :: messages(${messages})"></div>
+
+<script th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}"
+        src="webjars/jquery/3.3.1-1/jquery.js"></script>
+<script th:src="@{/webjars/tether/1.4.0/dist/js/tether.min.js}"
+        src="webjars/tether/1.4.0/dist/js/tether.js"></script>
+<script th:src="@{/webjars/materializecss/1.0.0-rc.2/js/materialize.min.js}"
+        src="webjars/materializecss/1.0.0-rc.2/js/materialize.js"></script>
+<!--
+<script th:src="@{/webjars/materialize/1.0.0-rc.2/dist/js/materialize.min.js}"
+        src="webjars/materialize/1.0.0-rc.2/dist/js/materialize.js"></script>
+-->
+</body>
+</html>
