@@ -38,6 +38,30 @@ include::../src/main/java/daggerok/app/ThymeleafConfig.kt[tags=content]
 include::../src/main/java/daggerok/app/Rest.kt[tags=content]
 ----
 
+== Build, test and run
+
+.gradle
+[source,bash]
+----
+./gradlew
+java -jar build/libs/*.jar
+bash build/libs/*.jar
+
+./gradlew build composeUp
+./gradlew composeDown
+----
+
+.maven
+[source,bash]
+----
+./mvnw
+java -jar target/*.jar
+bash target/*.jar
+
+bash mvnw com.dkanejs.maven.plugins:docker-compose-maven-plugin:1.0.1:up -P docker
+bash mvnw com.dkanejs.maven.plugins:docker-compose-maven-plugin:1.0.1:down -P docker
+----
+
 == Links
 
 ifdef::backend-html5[- link:./index.pdf[Documentation in PFD format]]
