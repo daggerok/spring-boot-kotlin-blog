@@ -4,7 +4,9 @@ buildscript {
     springBootVersion = '2.0.3.RELEASE'
     springCloudVersion = 'Finchley.RC1'
     jacksonKotlinVersion = '2.9.6'
-    lombokVersion = '1.16.22'
+    //lombokVersion = '1.16.22'
+    //lombokVersion = '1.18.0'
+    lombokVersion = '1.16.20'
     logbackVersion = '1.2.3'
     kotlinVersion = '1.2.51'
     slf4jVersion = '1.7.25'
@@ -28,6 +30,8 @@ buildscript {
     classpath "org.asciidoctor:asciidoctorj-pdf:$asciidoctorjPdfVersion"
   }
 
+  //// spring-boot versions overriding, be careful with it!
+  // In our case we are fixing PhantomJS (replacing older spring-boot version):
   ext['selenium.version'] = "$seleniumDriverVersion"
 }
 
@@ -41,6 +45,7 @@ plugins {
   id 'io.spring.dependency-management' version '1.0.5.RELEASE' apply false
   id 'org.springframework.boot' version '2.0.3.RELEASE' apply false
   id 'com.avast.gradle.docker-compose' version '0.6.13' apply false
+  id 'io.franzbecker.gradle-lombok' version '1.14' apply false
   id 'cn.bestwu.propdeps-eclipse' version '0.0.10' apply false
   id 'cn.bestwu.propdeps-maven' version '0.0.10' apply false
   id 'cn.bestwu.propdeps-idea' version '0.0.10' apply false
@@ -50,7 +55,7 @@ plugins {
 
 /*
 wrapper {
-  gradleVersion = '4.8.1'
+  gradleVersion = '4.9'
   distributionType = 'BIN'
 }
 */
