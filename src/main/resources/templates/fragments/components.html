@@ -24,7 +24,7 @@
   </ul>
 </div>
 
-<div th:fragment="messages (messages)" th:assert="${!#lists.isEmpty(messages)}">
+<div th:fragment="messages(messages)" th:assert="${!#lists.isEmpty(messages)}">
   <ul>
     <li th:each="message : ${messages}" class="list-style-type-none">
       [[${message}]]

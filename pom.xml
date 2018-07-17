@@ -108,13 +108,6 @@
       <artifactId>material-design-icons</artifactId>
       <version>3.0.1</version>
     </dependency>
-    <!--
-    <dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>materialize</artifactId>
-      <version>1.0.0-rc.2</version>
-    </dependency>
-    -->
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>materializecss</artifactId>
